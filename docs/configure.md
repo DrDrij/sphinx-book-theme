@@ -174,10 +174,14 @@ By default, this theme comes with these three theme-specific sidebar elements en
 (custom-footer)=
 ## Customize the sidebar footer
 
-You may choose your own HTML to include in the footer of your sidebar (or set it to be empty). To do so, use the following configuration variable in `conf.py`:
+You may choose your own HTML to include in the footer of your sidebar (or set it to be empty). To do so, set the following option in `conf.py`:
 
 ```python
-extra_navbar = "<p>Your HTML</p>"
+html_theme_options = {
+    ...
+    "extra_navbar": "<p>Your HTML</p>",
+    ...
+}
 ```
 
 This text will be placed at the bottom of the sidebar by default.
@@ -201,26 +205,6 @@ html_favicon = "path/to/favicon.ico"
 
 These will be placed in the top-left of your page.
 
-
-## Add metadata open graph tags to your site
-
-OpenGraph tags can be used to generate previews and descriptions of your
-website. These will be automatically generated based on your page's content
-and title. However, generating them requires knowing the full URL of your
-website ahead of time.
-
-To enable metadata tags for your documentation, use the following
-configuration in `conf.py`:
-
-```python
-html_baseurl = "https://<your-site-baseurl>"
-```
-
-For example, the value of this field for this documentation is:
-
-```python
-html_baseurl = "https://sphinx-book-theme.readthedocs.io/en/latest/"
-```
 
 ## Control the depth of the left sidebar lists to expand
 
